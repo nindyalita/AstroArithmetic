@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "D847DCFE-FDB2-448D-9F09-782BF4D9ACA5"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A54E9C08-3D46-41D3-A40F-D9E957C63A6A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MCOne/ContentView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "ContentView"
+            landmarkType = "14">
+            <Locations>
+               <Location
+                  uuid = "A54E9C08-3D46-41D3-A40F-D9E957C63A6A - d8783f56677c805"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "property wrapper backing initializer of MCOne.ContentView.imageName : Swift.String"
+                  moduleName = "MCOne"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/elwinjohansibarani/Documents/ADA/MCOne/MCOne/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  uuid = "A54E9C08-3D46-41D3-A40F-D9E957C63A6A - 8ff940212b3310ef"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MCOne.ContentView.imageName.getter : Swift.String"
+                  moduleName = "MCOne"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/elwinjohansibarani/Documents/ADA/MCOne/MCOne/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "152">
+               </Location>
+               <Location
+                  uuid = "A54E9C08-3D46-41D3-A40F-D9E957C63A6A - 9271b71df03200db"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MCOne.ContentView.imageName.setter : Swift.String"
+                  moduleName = "MCOne"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/elwinjohansibarani/Documents/ADA/MCOne/MCOne/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "172">
+               </Location>
+               <Location
+                  uuid = "A54E9C08-3D46-41D3-A40F-D9E957C63A6A - f3f30e3f890de4ea"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MCOne.ContentView.imageName.modify : Swift.String"
+                  moduleName = "MCOne"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/elwinjohansibarani/Documents/ADA/MCOne/MCOne/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "A54E9C08-3D46-41D3-A40F-D9E957C63A6A - a9b4c81bbf3910db"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MCOne.ContentView.imageName.modify : Swift.String with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "MCOne"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/elwinjohansibarani/Documents/ADA/MCOne/MCOne/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "40">
+               </Location>
+               <Location
+                  uuid = "A54E9C08-3D46-41D3-A40F-D9E957C63A6A - a66fa0bd26bfdf83"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MCOne.ContentView.$imageName.getter : SwiftUI.Binding&lt;Swift.String&gt;"
+                  moduleName = "MCOne"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/elwinjohansibarani/Documents/ADA/MCOne/MCOne/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "176">
+               </Location>
+               <Location
+                  uuid = "A54E9C08-3D46-41D3-A40F-D9E957C63A6A - d1f657a816ccf146"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MCOne.ContentView.init() -&gt; MCOne.ContentView"
+                  moduleName = "MCOne"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/elwinjohansibarani/Documents/ADA/MCOne/MCOne/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "472">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
