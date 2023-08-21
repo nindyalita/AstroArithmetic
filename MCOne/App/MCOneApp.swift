@@ -9,11 +9,9 @@ import SwiftUI
 
 @main
 struct MCOneApp: App {
-    
-    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            WelcomeScreen()
         }
     }
 }

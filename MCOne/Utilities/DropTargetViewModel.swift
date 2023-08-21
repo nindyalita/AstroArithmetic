@@ -8,6 +8,7 @@
 import Foundation
 import SwiftUI
 
+
 struct DTDropTarget: DropDelegate {
     var num1: Int
     var num2: Int
@@ -18,7 +19,7 @@ struct DTDropTarget: DropDelegate {
         print(num1, num2)
         let provider = info.itemProviders(for: [.text]).first
 
-        provider?.loadTransferable(type: String.self) { result in
+        _ = provider?.loadTransferable(type: String.self) { result in
             switch result {
             case .success(let string):
                 Task {

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct WelcomeScreen: View {
     
-    @State private var isAnimating: Bool = false
+    @StateObject private var welcomeViewModel = WelcomeViewModel()
 
     var body: some View {
         NavigationView{
@@ -17,37 +17,37 @@ struct WelcomeScreen: View {
                 
                 Image("light_astro")
                     .resizable()
-                    .opacity(isAnimating ? 0.5 : 1)
-                    .animation(.easeInOut(duration: 1).repeatForever(), value: isAnimating)
+                    .opacity(welcomeViewModel.isAnimating ? 0.5 : 1)
+                    .animation(.easeInOut(duration: 1).repeatForever(), value: welcomeViewModel.isAnimating)
                 
                 Image("astro")
                     .resizable()
                 
                 Image("light_arith")
                     .resizable()
-                    .opacity(isAnimating ? 0.5 : 1)
-                    .animation(.easeInOut(duration: 1).repeatForever(), value: isAnimating)
+                    .opacity(welcomeViewModel.isAnimating ? 0.5 : 1)
+                    .animation(.easeInOut(duration: 1).repeatForever(), value: welcomeViewModel.isAnimating)
 
                 Image("arithmetic")
                     .resizable()
                 
                 Image("light_button")
                     .resizable()
-                    .opacity(isAnimating ? 0.5 : 1)
-                    .animation(.easeInOut(duration: 1).repeatForever(), value: isAnimating)
+                    .opacity(welcomeViewModel.isAnimating ? 0.5 : 1)
+                    .animation(.easeInOut(duration: 1).repeatForever(), value: welcomeViewModel.isAnimating)
                     .onAppear{
-                        withAnimation{isAnimating = true}
+                        withAnimation{welcomeViewModel.isAnimating = true}
                     }
                 
                 NavigationLink(destination: PlayView()) {
                     Image("play_button3")
                         .resizable()
                         .frame(width: 100, height: 100)
-                        .rotationEffect(Angle.degrees(isAnimating ? 10 : -10))
+                        .rotationEffect(Angle.degrees(welcomeViewModel.isAnimating ? 10 : -10))
                         .onAppear{
-                            isAnimating = true
+                            welcomeViewModel.isAnimating = true
                         }
-                        .animation(.easeOut(duration: 1).repeatForever(), value: isAnimating)
+                        .animation(.easeOut(duration: 1).repeatForever(), value: welcomeViewModel.isAnimating)
                 }
                 .offset(y: 75)
             }
