@@ -15,7 +15,7 @@ class PlayViewModel: ObservableObject{
     @Published var sumCorrectAns: [String] = []
     @Published var isGameFinished: Bool = false
     @Published var confirmReplayGame: Bool = false
-    @Published var imageName: String = "Glove"
+    @Published var imageName: String = "helmet3"
     @Published var isOpenGuidance: Bool = true
     
     init(){
