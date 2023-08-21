@@ -14,7 +14,6 @@ struct WelcomeScreen: View {
     var body: some View {
         NavigationView{
             ZStack {
-                
                 Image("light_astro")
                     .resizable()
                     .opacity(welcomeViewModel.isAnimating ? 0.5 : 1)
@@ -38,6 +37,7 @@ struct WelcomeScreen: View {
                     .onAppear{
                         withAnimation{welcomeViewModel.isAnimating = true}
                     }
+                
                 
                 NavigationLink(destination: PlayView()) {
                     Image("play_button3")

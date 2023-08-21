@@ -12,16 +12,15 @@ struct WinningScreen: View {
     
     var body: some View {
         VStack {
-            NavigationStack{
+            NavigationView{
                 Image("helmet3")
                     .resizable()
                     .scaledToFit()
                     .frame(width: 300)
                     .padding(.top, 40)
                 
-                NavigationLink(destination: WelcomeScreen(), isActive: $winningViewModel.replayGame) {
+                NavigationLink(destination: WelcomeScreen()) {
                     Button {
-                        print("correct")
                         winningViewModel.replayGame.toggle()
                     } label: {
                         Image("replayGameButton")

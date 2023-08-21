@@ -12,7 +12,7 @@ struct PlayView: View {
     @StateObject private var playViewModel = PlayViewModel()
     
     var body: some View {
-        NavigationView(){
+        NavigationView{
             ZStack{
                 NavigationLink(destination: WinningScreen(), isActive: $playViewModel.isGameFinished){}
                 
