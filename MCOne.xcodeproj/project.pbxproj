@@ -14,7 +14,7 @@
 		167F3CEB2A8CF93D007AC99E /* PlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167F3CEA2A8CF93D007AC99E /* PlayView.swift */; };
 		167F3D072A8CFCE0007AC99E /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167F3D062A8CFCDF007AC99E /* QuestionView.swift */; };
 		167F3D092A8CFF06007AC99E /* AnswerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167F3D082A8CFF06007AC99E /* AnswerView.swift */; };
-		167F3D0D2A8D067E007AC99E /* DropTargetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167F3D0C2A8D067E007AC99E /* DropTargetViewModel.swift */; };
+		167F3D0D2A8D067E007AC99E /* DropTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167F3D0C2A8D067E007AC99E /* DropTarget.swift */; };
 		169A05372A8DE5080019CAC6 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169A05362A8DE5080019CAC6 /* AlertView.swift */; };
 		169A05392A8DE8EE0019CAC6 /* ConfirmationButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169A05382A8DE8EE0019CAC6 /* ConfirmationButtonView.swift */; };
 		169A053B2A8DE9650019CAC6 /* CustomConfirmationPropertiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169A053A2A8DE9650019CAC6 /* CustomConfirmationPropertiesView.swift */; };
@@ -34,7 +34,7 @@
 		167F3CEA2A8CF93D007AC99E /* PlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayView.swift; sourceTree = "<group>"; };
 		167F3D062A8CFCDF007AC99E /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
 		167F3D082A8CFF06007AC99E /* AnswerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerView.swift; sourceTree = "<group>"; };
-		167F3D0C2A8D067E007AC99E /* DropTargetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropTargetViewModel.swift; sourceTree = "<group>"; };
+		167F3D0C2A8D067E007AC99E /* DropTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropTarget.swift; sourceTree = "<group>"; };
 		169A05362A8DE5080019CAC6 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		169A05382A8DE8EE0019CAC6 /* ConfirmationButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationButtonView.swift; sourceTree = "<group>"; };
 		169A053A2A8DE9650019CAC6 /* CustomConfirmationPropertiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomConfirmationPropertiesView.swift; sourceTree = "<group>"; };
@@ -110,7 +110,7 @@
 		16D6DC622A9316A800B68136 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				167F3D0C2A8D067E007AC99E /* DropTargetViewModel.swift */,
+				167F3D0C2A8D067E007AC99E /* DropTarget.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -227,7 +227,7 @@
 				167F3D072A8CFCE0007AC99E /* QuestionView.swift in Sources */,
 				163E7CB92A9378630074F4E7 /* WelcomeViewModel.swift in Sources */,
 				167F3CE92A8CF853007AC99E /* PlayViewModel.swift in Sources */,
-				167F3D0D2A8D067E007AC99E /* DropTargetViewModel.swift in Sources */,
+				167F3D0D2A8D067E007AC99E /* DropTarget.swift in Sources */,
 				169A053B2A8DE9650019CAC6 /* CustomConfirmationPropertiesView.swift in Sources */,
 				16B14DCA2A8DDE03008D031C /* CustomButtoniew.swift in Sources */,
 				163E7CBB2A9379A60074F4E7 /* WinningViewModel.swift in Sources */,
