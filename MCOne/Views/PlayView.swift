@@ -9,12 +9,56 @@ import SwiftUI
 
 struct PlayView: View {
     
-    @StateObject private var playViewModel = PlayViewModel()
+    @State var question: [[Number]] = []
+    @State var isShowFalseAlert: Bool = false
+    @State var isShowCorrectAlert: Bool = false
+    @State var sumCorrectAns: [String] = []
+    @State var isGameFinished: Bool = false
+    @State var confirmReplayGame: Bool = false
+    @State var imageName: String = "helmet3"
+    @State var isOpenGuidance: Bool = true
+    
+    init(){
+        imageName = randomImageName()
+    }
+    
+    func randomImageName() -> String {
+        let imageNames = ["helmet3", "Astronout","Glove", "Shoes", "Suit"]
+        let imageName = imageNames.randomElement() ?? "helmet3"
+        return imageName
+    }
+    
+    func generateRandomNum(){
+        var randomNumber : [[Number]] = []
+        
+        for _ in 0..<4 {
+            var arrNumTemp: [Number] = []
+            for _ in 0..<4{
+                let tempNum1 = Int.random(in: 1..<10)
+                let tempNum2 = Int.random(in: 1..<10)
+                let resTemp = tempNum1 + tempNum2
+                let tempData = Number(operand1: tempNum1, operand2: tempNum2, result: resTemp)
+                arrNumTemp.append(tempData)
+            }
+            randomNumber.append(arrNumTemp)
+            arrNumTemp.removeAll()
+        }
+        question = randomNumber
+        print(question)
+    }
+
+    func hideAlert (timer: Int) async{
+        try? await Task.sleep(for: .seconds(timer))
+        DispatchQueue.main.async {
+            self.isShowFalseAlert=false
+            self.isShowCorrectAlert=false
+        }
+    }
     
     var body: some View {
         NavigationView{
             ZStack{
-                NavigationLink(destination: WinningScreen(), isActive: $playViewModel.isGameFinished){}
+                NavigationLink(destination: WinningScreen(), isActive: $isGameFinished){}
                 
                 HStack{
                     
@@ -31,11 +75,11 @@ struct PlayView: View {
                                 .foregroundColor(Color(.white))
                             
                             ZStack{
-                                Image(playViewModel.imageName)
+                                Image(imageName)
                                     .resizable()
                                     .frame(width: 350, height: 190)
                                 
-                                QuestionView(question: $playViewModel.question, isShowAlert: $playViewModel.isShowFalseAlert, sumCorrectAns: $playViewModel.sumCorrectAns, isGameFinished: $playViewModel.isGameFinished, isShowCorrectAlert: $playViewModel.isShowCorrectAlert)
+                                QuestionView(question: $question, isShowAlert: $isShowFalseAlert, sumCorrectAns: $sumCorrectAns, isGameFinished: $isGameFinished, isShowCorrectAlert: $isShowCorrectAlert)
                             }
                             .frame(maxWidth: 347, maxHeight: 202)
                         }
@@ -56,19 +100,19 @@ struct PlayView: View {
                             
                             //guide button
                             CustomButtonView(imageButtonName: "helpButton", action: {
-                                playViewModel.isOpenGuidance.toggle()
+                                isOpenGuidance.toggle()
                             })
                             
                             //replay button
                             CustomButtonView(imageButtonName: "restartButton", action: {
-                                playViewModel.confirmReplayGame.toggle()
+                                confirmReplayGame.toggle()
                             })
                         } //: HSTACK BUTTON
                         
                         Spacer()
                         
                         //MARK: ANSWER
-                        AnswerView(question: playViewModel.question)
+                        AnswerView(question: question)
                     }
                 }//: HSTACK
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -77,27 +121,27 @@ struct PlayView: View {
                     .edgesIgnoringSafeArea(.all)
                 )
                 .onAppear(){
-                    playViewModel.generateRandomNum()
+                    generateRandomNum()
                 }
                 
                 //MARK: CORRECT ALERT
-                if playViewModel.isShowCorrectAlert{
+                if isShowCorrectAlert{
                     AlertView(text: "Benar!", backgroundColor: .green, foregroundColor: .white)
                         .task {
-                            await playViewModel.hideAlert(timer: 1)
+                            await hideAlert(timer: 1)
                         }
                 }
                 
                 //MARK: FALSE ALERT
-                if playViewModel.isShowFalseAlert{
+                if isShowFalseAlert{
                     AlertView(text: "Yah jawaban kamu belum tepat. Ayo coba lagi!", backgroundColor: Color("BlueLight"), foregroundColor: .white)
                         .task {
-                            await playViewModel.hideAlert(timer: 3)
+                            await hideAlert(timer: 3)
                         }
                 }
                 
                 //MARK: CONFIRM REPLAY GAME
-                if(playViewModel.confirmReplayGame){
+                if(confirmReplayGame){
                     ZStack{
                         
                         ConfirmationButtonView()
@@ -107,14 +151,14 @@ struct PlayView: View {
                             HStack(){
                                 
                                 CustomConfirmationPropertiesView(imageButtonName: "correct_button", action: {
-                                    playViewModel.generateRandomNum()
-                                    playViewModel.sumCorrectAns.removeAll()
-                                    playViewModel.confirmReplayGame.toggle()
-                                    playViewModel.imageName = playViewModel.randomImageName()
+                                    generateRandomNum()
+                                    sumCorrectAns.removeAll()
+                                    confirmReplayGame.toggle()
+                                    imageName = randomImageName()
                                 })
                                 
                                 CustomConfirmationPropertiesView(imageButtonName: "wrong_button", action: {
-                                    playViewModel.confirmReplayGame.toggle()
+                                    confirmReplayGame.toggle()
                                 })
                                 
                             }
@@ -129,7 +173,7 @@ struct PlayView: View {
                 }
                 
                 //MARK: CONFIRM OPEN GUIDE
-                if(playViewModel.isOpenGuidance){
+                if(isOpenGuidance){
                     
                     ZStack{
                         
@@ -138,7 +182,7 @@ struct PlayView: View {
                         VStack{
                             
                             CustomConfirmationPropertiesView(imageButtonName: "tombolMengerti", action: {
-                                playViewModel.isOpenGuidance.toggle()
+                                isOpenGuidance.toggle()
                             })
                             .position(x:380, y:290)
                             

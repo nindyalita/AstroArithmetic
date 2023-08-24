@@ -9,7 +9,7 @@ import SwiftUI
 
 struct WinningScreen: View {
     
-    @StateObject private var winningViewModel = WinningViewModel()
+    @State var replayGame: Bool = false
     
     var body: some View {
         VStack{
@@ -19,10 +19,10 @@ struct WinningScreen: View {
                 .frame(width: 300)
                 .padding(.top, 40)
             
-            NavigationLink(destination: WelcomeScreen(), isActive: $winningViewModel.replayGame){
+            NavigationLink(destination: WelcomeScreen(), isActive: $replayGame){
                 Button(){
                     print("correct")
-                    winningViewModel.replayGame.toggle()
+                    replayGame.toggle()
                 } label: {
                     Image("replayGameButton")
                         .resizable()

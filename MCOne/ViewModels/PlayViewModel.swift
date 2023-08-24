@@ -37,7 +37,7 @@ class PlayViewModel: ObservableObject{
                 let tempNum1 = Int.random(in: 1..<10)
                 let tempNum2 = Int.random(in: 1..<10)
                 let resTemp = tempNum1 + tempNum2
-                let tempData = Number(num1: tempNum1, num2: tempNum2, resAdd: resTemp)
+                let tempData = Number(operand1: tempNum1, operand2: tempNum2, result: resTemp)
                 arrNumTemp.append(tempData)
             }
             randomNumber.append(arrNumTemp)

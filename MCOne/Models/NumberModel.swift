@@ -9,8 +9,8 @@ import Foundation
 
 struct Number: Hashable {
     var id: String = UUID().uuidString
-    var num1: Int
-    var num2: Int
-    var resAdd: Int
+    var operand1: Int
+    var operand2: Int
+    var result: Int
     var isCorrect: Bool = false
 }
