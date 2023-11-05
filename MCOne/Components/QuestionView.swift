@@ -38,7 +38,7 @@ struct QuestionView: View {
                 VStack{
                     ForEach(Array(que.enumerated()), id: \.offset){col, num in
                         HStack{
-                            Text("\(question[row][col].num1) + \(question[row][col].num2)")
+                            Text("\(question[row][col].operand1) + \(question[row][col].operand2)")
                                 .frame(width: 88, height: 52)
                                 .foregroundColor(Color(.white))
                                 .background(
@@ -48,7 +48,7 @@ struct QuestionView: View {
                                 .background(Color("PurpleLight"))
                                 .padding(.horizontal, 3)
                                 .font(.system(size: 14).bold())
-                                .onDrop(of: ["text"], delegate: DTDropTarget(num1: question[row][col].num1, num2: question[row][col].num2) { succeed in
+                                .onDrop(of: ["text"], delegate: DTDropTarget(num1: question[row][col].operand1, num2: question[row][col].operand2) { succeed in
                                     handleDrop(succeed: succeed, row: row, col: col)
                                 })
                         }

@@ -11,5 +11,4 @@ class WelcomeViewModel: ObservableObject{
     
     @Published var isAnimating: Bool = false
     
-    
 }

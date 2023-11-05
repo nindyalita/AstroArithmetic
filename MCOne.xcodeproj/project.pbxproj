@@ -115,6 +115,14 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		16E3B9782A95C01E003F21E3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F5591C6E29E2DD870011A1E8 /* Assets.xcassets */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		F5591C5E29E2DD860011A1E8 = {
 			isa = PBXGroup;
 			children = (
@@ -135,13 +143,13 @@
 			isa = PBXGroup;
 			children = (
 				167F3CE52A8CE7F7007AC99E /* App */,
-				16D6DC622A9316A800B68136 /* Utilities */,
 				167F3CE42A8CE7B5007AC99E /* Components */,
-				167F3CE22A8CE76F007AC99E /* ViewModels */,
 				167F3CDF2A8CE707007AC99E /* Models */,
-				F5591C6E29E2DD870011A1E8 /* Assets.xcassets */,
-				F5591C7029E2DD870011A1E8 /* Preview Content */,
 				167F3CE02A8CE716007AC99E /* Views */,
+				167F3CE22A8CE76F007AC99E /* ViewModels */,
+				16D6DC622A9316A800B68136 /* Utilities */,
+				F5591C7029E2DD870011A1E8 /* Preview Content */,
+				16E3B9782A95C01E003F21E3 /* Supporting Files */,
 			);
 			path = MCOne;
 			sourceTree = "<group>";
